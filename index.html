@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Magic 8-ball</title>
+	</head>
+	<body>
+		<!-- 8-Ball -->
+		<div class="eight-ball">
+			<div class="number"><span class="number-eight">8</span></div>
+		</div>
+		<!-- Show advice -->
+		<div class="container">
+			<p class="advice"></p>
+			<span class="underline"></span>
+		</div>
+		<!-- Input question -->
+		<form class="question-form">
+			<input
+				type="text"
+				class="question-input"
+				placeholder="Ask your question here.."
+			/>
+			<button type="submit" class="question-button">Ask</button>
+		</form>
+		<div class="status-message">
+			<divs class="message"></divs>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>
