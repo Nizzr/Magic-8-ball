@@ -76,6 +76,12 @@ function shake() {
 }
 function showAdvice(adv) {
 	advice.textContent = adv;
+	// For longer advices
+	if (advice.clientWidth > 1000) {
+		advice.style.fontSize = '2rem';
+		underline.style.height = '15px';
+		underline.style.marginTop = '-15px';
+	}
 	let randomColor = Math.floor(Math.random() * 16777215).toString(16); // Generate random color
 	underline.style.backgroundColor = '#' + randomColor;
 	container.classList.add('appear');
@@ -106,8 +112,8 @@ function chooseAdvice(e) {
 	let uniqueAdvice = [...new Set(customAdvice)]; // Create a set from chosen advices in customAdvice
 	customAdvice = Array.from(uniqueAdvice); // Convert the set back into an array
 	console.log(customAdvice);
-	if (customAdvice.length == 0) {
-		// No advice matching the user input
+	if (customAdvice.length == 0 || question === '') {
+		// No advice matching the user input or empty submission
 		message.textContent =
 			"I didn't find what you asked for,\r\n here's a random advice instead!";
 		let i = Math.floor(Math.random() * 25); // Generate random number between 0 & 23
