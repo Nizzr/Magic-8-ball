@@ -2,4 +2,4 @@
 
 My submition to the Weekly Scrimba challenge.
 
-Link: https://naughty-minsky-8f74bb.netlify.app/
+[live preview](https://naughty-minsky-8f74bb.netlify.app/)
